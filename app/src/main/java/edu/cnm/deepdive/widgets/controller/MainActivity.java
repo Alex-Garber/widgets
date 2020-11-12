@@ -22,7 +22,10 @@ private ActivityMainBinding binding;
         setContentView(binding.getRoot());
         binding.input1.addTextChangedListener(this);
         binding.input2.addTextChangedListener(this);
+        binding.input3.addTextChangedListener(this);
+       // binding.computeSum.set.setOnclickListener()
     }
+
 
     private void computeAndDisplaySum() {
         double Fahrenheit;
@@ -34,28 +37,28 @@ private ActivityMainBinding binding;
         }else {
             Fahrenheit = Double.parseDouble(input1);
         }
-//        double valueC;
-//        String input2 = binding.input2.getText().toString().trim();
-//        if (input2.isEmpty()){
-//            input2 = "0";
-//            binding.input2.setText(input1);
-//            valueC = 0;
-//        }else {
-//            valueC = Double.parseDouble(input2);
-//        }
-//
-//
-//        double valueK;
-//        String input3 = binding.input3.getText().toString().trim();
-//        if (input3.isEmpty()){
-//            input3 = "0";
-//            binding.input3.setText(input1);
-//            valueK = 0;
-//        }else {
-//            valueK = Double.parseDouble(input1);
-//        }
+        double Celsius;
+        String input2 = binding.input2.getText().toString().trim();
+        if (input2.isEmpty()){
+            input2 = "0";
+            binding.input2.setText(input1);
+            Celsius = 0;
+        }else {
+            Celsius = Double.parseDouble(input2);
+        }
+
+
+        double valueK;
+        String Kelvin = binding.input3.getText().toString().trim();
+        if (Kelvin.isEmpty()){
+            Kelvin = "0";
+            binding.input3.setText(input1);
+            valueK = 0;
+        }else {
+            valueK = Double.parseDouble(input1);
+        }
         double sumF = Fahrenheit;
-        binding.output1.setText(getString(R.string.sum_resource, sumF));
+        binding.setText(getString(R.string.sum_resource, sumF));
 
         double sumC = Fahrenheit - 32 / 1.8 ;
         binding.output2.setText(getString(R.string.sum_resource, sumC));
