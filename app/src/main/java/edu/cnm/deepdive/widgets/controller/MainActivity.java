@@ -25,26 +25,43 @@ private ActivityMainBinding binding;
     }
 
     private void computeAndDisplaySum() {
-        double value1;
+        double Fahrenheit;
         String input1 = binding.input1.getText().toString().trim();
         if (input1.isEmpty()){
             input1 = "0";
             binding.input1.setText(input1);
-            value1 = 0;
+            Fahrenheit = 0;
         }else {
-            value1 = Double.parseDouble(input1);
+            Fahrenheit = Double.parseDouble(input1);
         }
-        double value2;
-        String input2 = binding.input2.getText().toString().trim();
-        if (input2.isEmpty()){
-            input2 = "0";
-            binding.input2.setText(input1);
-            value2 = 0;
-        }else {
-            value2 = Double.parseDouble(input2);
-        }
-        double sum = value1 + value2;
-        binding.output.setText(getString(R.string.sum_resource, sum));
+//        double valueC;
+//        String input2 = binding.input2.getText().toString().trim();
+//        if (input2.isEmpty()){
+//            input2 = "0";
+//            binding.input2.setText(input1);
+//            valueC = 0;
+//        }else {
+//            valueC = Double.parseDouble(input2);
+//        }
+//
+//
+//        double valueK;
+//        String input3 = binding.input3.getText().toString().trim();
+//        if (input3.isEmpty()){
+//            input3 = "0";
+//            binding.input3.setText(input1);
+//            valueK = 0;
+//        }else {
+//            valueK = Double.parseDouble(input1);
+//        }
+        double sumF = Fahrenheit;
+        binding.output1.setText(getString(R.string.sum_resource, sumF));
+
+        double sumC = Fahrenheit - 32 / 1.8 ;
+        binding.output2.setText(getString(R.string.sum_resource, sumC));
+
+        double sumK = (Fahrenheit + 459.67) * 5/9  ;
+        binding.output3.setText(getString(R.string.sum_resource, sumK));
     }
 
     @Override

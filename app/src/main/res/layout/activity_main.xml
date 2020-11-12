@@ -36,31 +36,50 @@
       android:layout_width="100dp"
       android:layout_height="wrap_content"
       android:inputType="numberDecimal|numberSigned"
-      android:hint="Number 1"
+      android:hint="Number F"
       tools:text="273.15"/>
 
   </com.google.android.material.textfield.TextInputLayout>
 
-  <com.google.android.material.textfield.TextInputLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:hintEnabled="true"
-    app:hintAnimationEnabled="true"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"
-    app:layout_constraintStart_toEndOf="@id/vertical_guideline">
+<!--  <com.google.android.material.textfield.TextInputLayout-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    app:hintEnabled="true"-->
+<!--    app:hintAnimationEnabled="true"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"-->
+<!--    app:layout_constraintStart_toEndOf="@id/vertical_guideline">-->
 
-    <com.google.android.material.textfield.TextInputEditText
-      android:id="@+id/input2"
-      android:layout_width="100dp"
-      android:layout_height="wrap_content"
-      android:inputType="numberDecimal|numberSigned"
-      android:hint="Number 2"
-      tools:text="273.15"/>
+<!--    <com.google.android.material.textfield.TextInputEditText-->
+<!--      android:id="@+id/input2"-->
+<!--      android:layout_width="100dp"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:inputType="numberDecimal|numberSigned"-->
+<!--      android:hint="Number C"-->
+<!--      tools:text="273.15"/>-->
 
-  </com.google.android.material.textfield.TextInputLayout>
+<!--  </com.google.android.material.textfield.TextInputLayout>-->
 
+<!--  <com.google.android.material.textfield.TextInputLayout-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    app:hintEnabled="true"-->
+<!--    app:hintAnimationEnabled="true"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/horizontal_guideline"-->
+<!--    app:layout_constraintEnd_toEndOf="@id/vertical_guideline"-->
+<!--    app:layout_constraintStart_toStartOf="parent">-->
+
+<!--    <com.google.android.material.textfield.TextInputEditText-->
+<!--      android:id="@+id/input3"-->
+<!--      android:layout_width="100dp"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:inputType="numberDecimal|numberSigned"-->
+<!--      android:hint="Number K"-->
+<!--      tools:text="273.15"/>-->
+
+<!--  </com.google.android.material.textfield.TextInputLayout>-->
 
 
   <com.google.android.material.textfield.TextInputLayout
@@ -73,11 +92,46 @@
 
     >
     <com.google.android.material.textfield.TextInputEditText
-      android:id="@+id/output"
+      android:id="@+id/output2"
       android:layout_width="100dp"
       android:layout_height="wrap_content"
       android:editable="false"
-      android:hint="Sum"
+      android:hint="Sum C"
+      android:inputType="none"
+      tools:text="273.15"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   app:layout_constraintTop_toBottomOf="@id/horizontal_guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/vertical_guideline"
+    >
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/output1"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:editable="false"
+      android:hint="Sum F"
+      android:inputType="none"
+      tools:text="273.15"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+   app:layout_constraintStart_toStartOf="@id/vertical_guideline"
+
+    >
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/output3"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:editable="false"
+      android:hint="Sum K"
       android:inputType="none"
       tools:text="273.15"/>
   </com.google.android.material.textfield.TextInputLayout>
