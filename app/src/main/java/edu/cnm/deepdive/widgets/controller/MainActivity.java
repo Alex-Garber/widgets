@@ -9,7 +9,7 @@ import android.os.Bundle;
 import edu.cnm.deepdive.widgets.R;
 import edu.cnm.deepdive.widgets.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements TextWatcher {
+public class MainActivity extends AppCompatActivity {
 
 private ActivityMainBinding binding;
 
@@ -20,10 +20,8 @@ private ActivityMainBinding binding;
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        binding.input1.addTextChangedListener(this);
-        binding.input2.addTextChangedListener(this);
-        binding.input3.addTextChangedListener(this);
-       // binding.computeSum.set.setOnclickListener()
+
+
     }
 
 
@@ -57,29 +55,6 @@ private ActivityMainBinding binding;
         }else {
             valueK = Double.parseDouble(input1);
         }
-        double sumF = Fahrenheit;
-        binding.setText(getString(R.string.sum_resource, sumF));
-
-        double sumC = Fahrenheit - 32 / 1.8 ;
-        binding.output2.setText(getString(R.string.sum_resource, sumC));
-
-        double sumK = (Fahrenheit + 459.67) * 5/9  ;
-        binding.output3.setText(getString(R.string.sum_resource, sumK));
-    }
-
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable s) {
-        computeAndDisplaySum();
 
     }
 }

@@ -84,30 +84,33 @@
 
 
   <Button
-    android:id="@+id/covertToF"
+    android:id="@+id/covert_to_f"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:text="Convert to Fahrenheit"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@id/vertical_guideline"
-    app:layout_constraintTop_toBottomOf="@id/covertToC"/>
+    app:layout_constraintTop_toBottomOf="@id/covert_to_c"/>
 
   <Button
-    android:id="@+id/covertToC"
+    android:id="@+id/covert_to_c"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:text="Convert to Celsius "
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@id/vertical_guideline"
     app:layout_constraintTop_toBottomOf="@id/horizontal_guideline"/>
 
   <Button
-    android:id="@+id/covertToK"
+    android:id="@+id/covert_to_k"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:text="Convert to Kelvin"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@id/vertical_guideline"
-    app:layout_constraintBottom_toTopOf="@id/covertToC"
+    app:layout_constraintBottom_toTopOf="@id/covert_to_c"
    app:layout_constraintTop_toBottomOf="@id/horizontal_guideline" />
 <!--  <com.google.android.material.textfield.TextInputLayout-->
 <!--    android:layout_width="wrap_content"-->
