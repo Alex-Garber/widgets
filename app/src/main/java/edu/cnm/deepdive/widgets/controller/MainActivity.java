@@ -23,10 +23,30 @@ public class MainActivity extends AppCompatActivity {
             double value1 = Double.parseDouble(binding.inputf.getText().toString());
             double value2 = Double.parseDouble(binding.inputc.getText().toString());
             double value3 = Double.parseDouble(binding.inputk.getText().toString());
-           double cel = value1 - 32 / 1.8 ;
-            binding.inputf.setText(String.format("%.2f", cel));
+           double cel = (value1 - 32) / 1.8;
+
+            binding.inputc.setText(String.format("%.2f", cel));
+
+        });
+        binding.covertToK.setOnClickListener((v) -> {
+            double value1 = Double.parseDouble(binding.inputf.getText().toString());
+            double value2 = Double.parseDouble(binding.inputc.getText().toString());
+            double value3 = Double.parseDouble(binding.inputk.getText().toString());
+
+            double kev = value1 - 273.15;
+
+            binding.inputk.setText(String.format("%.2f", kev));
         });
 
+        binding.covertToF.setOnClickListener((v) -> {
+            double value1 = Double.parseDouble(binding.inputf.getText().toString());
+            double value2 = Double.parseDouble(binding.inputc.getText().toString());
+            double value3 = Double.parseDouble(binding.inputk.getText().toString());
+
+            double fer = value3 + 273.15;
+
+            binding.inputf.setText(String.format("%.2f", fer));
+        });
 
     }
 }
