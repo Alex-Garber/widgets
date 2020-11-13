@@ -19,12 +19,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        computeAndView();
+
+    }
+
+    private void computeAndView() {
         binding.covertToC.setOnClickListener((v) -> {
             double value1 = Double.parseDouble(binding.inputf.getText().toString());
             double value2 = Double.parseDouble(binding.inputc.getText().toString());
             double value3 = Double.parseDouble(binding.inputk.getText().toString());
            double cel = (value1 - 32) / 1.8;
-
             binding.inputc.setText(String.format("%.2f", cel));
 
         });
@@ -47,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
             binding.inputf.setText(String.format("%.2f", fer));
         });
-
     }
 }
 
